@@ -158,7 +158,17 @@
                                     <constraint firstAttribute="width" constant="117" id="uoD-3W-hWi"/>
                                 </constraints>
                                 <state key="normal" title="BUY NOW" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p06-iH-hu7"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-n7-bfX">
+                                <rect key="frame" x="68" y="269.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IHx-FK-fYn"/>
+                                    <constraint firstAttribute="width" constant="240" id="WQ1-fp-9iF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -170,6 +180,7 @@
                             <constraint firstItem="WE0-JK-AhT" firstAttribute="leading" secondItem="4Px-kY-B9R" secondAttribute="leading" id="4XY-du-yBK"/>
                             <constraint firstItem="Hgy-Y8-O0l" firstAttribute="leading" secondItem="hNv-bh-cmz" secondAttribute="leading" id="5A8-tS-H0R"/>
                             <constraint firstItem="qjI-p1-LJh" firstAttribute="trailing" secondItem="8qz-Jv-eI6" secondAttribute="trailing" id="5Re-2O-CBj"/>
+                            <constraint firstItem="SVT-n7-bfX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Xx-BS-Vq8"/>
                             <constraint firstItem="BKa-eW-1dc" firstAttribute="trailing" secondItem="mSA-h5-1An" secondAttribute="trailing" id="6cS-HP-lTj"/>
                             <constraint firstItem="8qz-Jv-eI6" firstAttribute="centerX" secondItem="iZS-TX-hvH" secondAttribute="centerX" id="6ip-GB-OQa"/>
                             <constraint firstItem="Hgy-Y8-O0l" firstAttribute="top" secondItem="hNv-bh-cmz" secondAttribute="bottom" constant="8" id="6lK-Og-rIa"/>
@@ -180,6 +191,7 @@
                             <constraint firstItem="idp-c9-MjJ" firstAttribute="top" secondItem="G7Y-Bd-w86" secondAttribute="bottom" constant="8" id="Djq-6Q-3jB"/>
                             <constraint firstItem="i1a-J8-vhe" firstAttribute="top" secondItem="qjI-p1-LJh" secondAttribute="bottom" constant="10" id="Eud-Fp-XrK"/>
                             <constraint firstItem="mSA-h5-1An" firstAttribute="leading" secondItem="WE0-JK-AhT" secondAttribute="leading" id="FHF-sx-Ui8"/>
+                            <constraint firstItem="SVT-n7-bfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FdC-7B-Z6p"/>
                             <constraint firstItem="hNv-bh-cmz" firstAttribute="trailing" secondItem="wQh-sc-y8W" secondAttribute="trailing" id="I7f-gW-HEe"/>
                             <constraint firstItem="CS1-kB-f8I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="LYX-Om-ulc"/>
                             <constraint firstItem="wQh-sc-y8W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="N9v-fx-ycc"/>
@@ -222,14 +234,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adressLabel" destination="4Px-kY-B9R" id="nKw-Pc-vC1"/>
                         <outlet property="adressTextField" destination="WE0-JK-AhT" id="Ykl-6s-8yx"/>
                         <outlet property="buyNowBtn" destination="idp-c9-MjJ" id="liy-xZ-NUc"/>
+                        <outlet property="cityLabel" destination="mSA-h5-1An" id="2wT-cl-WSS"/>
                         <outlet property="cityTextFiled" destination="BKa-eW-1dc" id="QKO-ge-mH6"/>
                         <outlet property="countryLabel" destination="8qz-Jv-eI6" id="ddv-w8-Bg8"/>
                         <outlet property="countryTextField" destination="qjI-p1-LJh" id="U8X-6W-c9D"/>
+                        <outlet property="devider" destination="wQh-sc-y8W" id="ISc-t4-aqp"/>
+                        <outlet property="miraclePillEmoji" destination="CS1-kB-f8I" id="OVh-IM-ok0"/>
+                        <outlet property="miraclePillsLabel" destination="mUp-9Q-IJm" id="U1e-bt-8Dp"/>
+                        <outlet property="nameLabel" destination="hNv-bh-cmz" id="aMq-dg-FR8"/>
                         <outlet property="nameTextField" destination="Hgy-Y8-O0l" id="Mqp-QK-cZc"/>
+                        <outlet property="priceLabel" destination="QVx-Cw-9BR" id="5rE-G7-DYx"/>
+                        <outlet property="stateLabel" destination="iZS-TX-hvH" id="hq7-I1-lM8"/>
                         <outlet property="statePicker" destination="DyG-gQ-l3c" id="5Gd-iv-nPZ"/>
                         <outlet property="statePickerBtn" destination="auV-ML-IZH" id="b4X-ob-Bsn"/>
+                        <outlet property="successImg" destination="SVT-n7-bfX" id="Npp-rC-cHG"/>
                         <outlet property="zipcodeLabel" destination="i1a-J8-vhe" id="7t0-FA-dz9"/>
                         <outlet property="zipcodeTextField" destination="G7Y-Bd-w86" id="6DH-W6-r0c"/>
                         <outletCollection property="buyNowBtn" destination="idp-c9-MjJ" collectionClass="NSMutableArray" id="o9X-WR-28F"/>
@@ -243,5 +264,6 @@
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

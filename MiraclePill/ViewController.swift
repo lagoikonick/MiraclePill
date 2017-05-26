@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var successImg: UIImageView!
+    
+    @IBOutlet weak var miraclePillEmoji: UIImageView!
+    
+    @IBOutlet weak var miraclePillsLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var devider: UIView!
+    
     @IBOutlet weak var statePicker: UIPickerView!
     
     @IBOutlet weak var statePickerBtn: UIButton!
     
     @IBOutlet weak var countryLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var cityLabel: UILabel!
 
     @IBOutlet weak var buyNowBtn: UIButton!
     
     @IBOutlet weak var zipcodeLabel: UILabel!
+    
+    @IBOutlet weak var adressLabel: UILabel!
+    
+    @IBOutlet weak var stateLabel: UILabel!
     
 //text fields
     @IBOutlet weak var nameTextField: UITextField!
@@ -98,6 +115,33 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
+    @IBAction func buyNowBtnIsPressed(_ sender: Any) {
+        successImg.isHidden = true
+        miraclePillEmoji.isHidden = true
+        miraclePillsLabel.isHidden = true
+        priceLabel.isHidden = true
+        devider.isHidden = true
+        nameLabel.isHidden = true
+        nameTextField.isHidden = true
+        adressLabel.isHidden = true
+        adressTextField.isHidden = true
+        cityLabel.isHidden = true
+        cityTextFiled.isHidden = true
+        statePicker.isHidden = true
+        statePickerBtn.isHidden = true
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        zipcodeLabel.isHidden = true
+        zipcodeTextField.isHidden = true
+        stateLabel.isHidden = true
+        buyNowBtn.isHidden = true
+        
+        successImg.isHidden = false
+        
+        
+    }
+    
+    
     
     
     //Hide keyboard when user touches outside
@@ -115,5 +159,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         return (true)
     }
+    
+    
     
 }
