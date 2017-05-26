@@ -212,12 +212,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adressTextField" destination="WE0-JK-AhT" id="Ykl-6s-8yx"/>
+                        <outlet property="cityTextFiled" destination="BKa-eW-1dc" id="QKO-ge-mH6"/>
                         <outlet property="countryLabel" destination="8qz-Jv-eI6" id="ddv-w8-Bg8"/>
-                        <outlet property="countryTextField" destination="qjI-p1-LJh" id="THp-SO-Fbc"/>
+                        <outlet property="countryTextField" destination="qjI-p1-LJh" id="U8X-6W-c9D"/>
+                        <outlet property="nameTextField" destination="Hgy-Y8-O0l" id="Mqp-QK-cZc"/>
                         <outlet property="statePicker" destination="DyG-gQ-l3c" id="5Gd-iv-nPZ"/>
                         <outlet property="statePickerBtn" destination="auV-ML-IZH" id="b4X-ob-Bsn"/>
                         <outlet property="zipcodeLabel" destination="i1a-J8-vhe" id="7t0-FA-dz9"/>
-                        <outlet property="zipcodeTextField" destination="G7Y-Bd-w86" id="DlY-5K-1Ed"/>
+                        <outlet property="zipcodeTextField" destination="G7Y-Bd-w86" id="6DH-W6-r0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
