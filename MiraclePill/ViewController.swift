@@ -15,8 +15,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePickerBtn: UIButton!
     
     @IBOutlet weak var countryLabel: UILabel!
- 
     
+
+    @IBOutlet weak var buyNowBtn: UIButton!
     
     @IBOutlet weak var zipcodeLabel: UILabel!
     
@@ -64,6 +65,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipcodeLabel.isHidden = true
         zipcodeTextField.isHidden = true
         
+        buyNowBtn.isHidden = true
         
         
     }
@@ -91,6 +93,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         //прячем zipcodeLabel и zipcodeTextField
         zipcodeLabel.isHidden = false
         zipcodeTextField.isHidden = false
+         buyNowBtn.isHidden = false
     }
     
     
